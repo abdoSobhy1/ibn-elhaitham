@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&display=swap');
+
+:root {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+.container {
+    margin-inline: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    background-color: #636c79;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+}
+
+.side-content {
+    position: fixed;
+}
+
+@media (max-width:768px) {
+    .sidebar {
+        position: relative;
+        z-index: 2;
+    }
+    .side-content {
+        position: absolute;
+        right: 0;
+        max-width: 100%;
+    }
+}
+
+.logo {
+    margin: 10px 10px 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.logo .image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.logo img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.logo h2 {
+    color: #f1f1f1;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f1f1f1;
+    font-size: 12px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #b0b4bc;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    margin: 5px auto;
+    padding: 10px 10px;
+}
+
+.sidebar ul li i {
+    font-size: 16px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+    color: #636c79;
+    font-weight: bold;
+    transform: translateX(-5px);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.student {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.student .info span {
+    padding-right: 10px;
+    display: block;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #9c9c9c;
+}
+
+.student .info span:first-of-type {
+    color: white;
+    margin-top: -5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.student .info span:last-of-type {
+    color: #b0b4bc;
+    margin-top: 3px;
+    font-size: 12px;
+}
+
+.student img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.buttons {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.student-info button {
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    color: #636c79;
+    display: inline;
+    font-size: 12px;
+    box-shadow: 0 0 16px 4px rgb(0 0 0 / 30%);
+}
+
+.student-info button:first-of-type {
+    margin-left: 10px;
+}
+
+.student-info button i {
+    padding-left: 5px;
+}
+
+.student-info button:focus {
+    border: none;
+    outline: none;
+}
+
+@media (max-width:768px) {
+    .sidebar ul li a{
+        justify-content: center;
+    }
+    .sidebar ul li a.active,
+    .sidebar ul li a:hover {
+        transform: translateX(0);
+    }
+    .sidebar ul li span {
+        display: none;
+    }
+    .student .info span{
+        display: none;
+    }
+}
+
+.content {
+    grid-column: 2/span 4;
+    background-color: #F2F2F2;
+    padding: 30px 30px;
+}
+
+.content .title h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 10px;
+    border-right: #636c79 3px solid;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(1 , minmax(310px, 1fr));
+    gap: 30px;
+    margin: 30px 10px;
+}
+
+.cards .card {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    color: #110e3e;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cards .card:hover {
+    scale: 1.02;
+    box-shadow: 0px 17px 39px -5px rgba(0,0,0,0.3);
+}
+
+.cards .card h2 {
+    margin: 0 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cards .card .info-row {
+    margin: 10px 5px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+}
+
+.cards .card .info-row span:first-of-type {
+    font-weight: lighter;
+    width: 110px;
+}
