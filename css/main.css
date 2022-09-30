@@ -37,10 +37,17 @@ body {
         position: fixed;
         height: 100vh;
         width: 100%;
-        max-width: 300px;
+        max-width: 50px;
         z-index: 2;
-        right: -300px;
+        right: 0px;
+        transition: 0.3s;
+        overflow: hidden;
     }
+
+    .sidebar:hover {
+        max-width: 300px;
+    }
+
     .side-content {
         right: 0;
         height: 100vh;
@@ -176,9 +183,31 @@ ul {
 }
 
 @media (max-width:768px) {
+    .logo {
+        margin-right: 0;
+    }
+
+    .logo img {
+        margin-left: 0;
+    }
+    .logo h2,
+    .logo span {
+        display: none;
+    }
+    .sidebar ul li a {
+    }
+
     .sidebar ul li a.active,
     .sidebar ul li a:hover {
         transform: translateX(0);
+    }
+
+    .sidebar ul li span {
+        display: none;
+    }
+
+    .student .info span {
+        display: none;
     }
 }
 
