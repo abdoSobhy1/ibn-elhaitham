@@ -39,7 +39,7 @@ body {
         width: 100%;
         max-width: 300px;
         z-index: 2;
-        right: 0;
+        right: -300px;
     }
     .side-content {
         right: 0;
