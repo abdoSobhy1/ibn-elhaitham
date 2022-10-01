@@ -262,8 +262,7 @@ ul {
 
 @media (max-width:768px) {
     .content {
-        padding-top: 20px;
-        padding-right: 65px;
+        padding: 20px 55px 30px;
         max-width: 100%;
     }
 }
@@ -278,7 +277,7 @@ ul {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(1 , minmax(310px, 1fr));
+    grid-template-columns: repeat(1 , minmax(auto, 1fr));
     gap: 30px;
     margin: 30px 10px;
 }
@@ -317,6 +316,9 @@ ul {
 }
 
 @media (max-width:768px) {
+    .cards .card .info-row {
+        font-size: 12px;
+    }
     .overlay {
         background-color: #00000000;
         position: absolute;
