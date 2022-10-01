@@ -263,7 +263,7 @@ ul {
 
 @media (max-width:768px) {
     .content {
-        padding: 20px 55px 30px;
+        padding: 20px 50px 30px 5px;
         max-width: 100%;
     }
 }
@@ -317,6 +317,9 @@ ul {
 }
 
 @media (max-width:768px) {
+    .content .title h2 {
+        margin-right: 5px;
+    }
     .cards .card .info-row {
         font-size: 12px;
     }
