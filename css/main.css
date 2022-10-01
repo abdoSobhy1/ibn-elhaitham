@@ -323,6 +323,10 @@ ul {
     .cards .card .info-row {
         font-size: 12px;
     }
+
+    .cards .card .info-row span:first-of-type {
+        width: 94px;
+    }
     .overlay {
         position: absolute;
         z-index: -1;
