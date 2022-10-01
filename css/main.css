@@ -322,7 +322,7 @@ ul {
     }
     .overlay {
         position: absolute;
-        z-index: 1;
+        z-index: -1;
         width: 100vw;
         height: 100vh;
         transition: 0.3s linear;
@@ -330,5 +330,6 @@ ul {
 
     .overlay.activated {
         background-color: #000000a3;
+        z-index: 1;
     }
 }
