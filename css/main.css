@@ -40,8 +40,8 @@ body {
         max-width: 50px;
         z-index: 2;
         right: 0px;
-        transition: 0.3s;
         overflow: hidden;
+        transition: 0.3s;
     }
 
     .sidebar.is-active {
@@ -185,7 +185,7 @@ ul {
 @media (max-width:768px) {
     .logo {
         margin-right: 0;
-        margin-bottom: 40px;
+        margin-bottom: 15px;
     }
 
     .logo img {
@@ -222,7 +222,7 @@ ul {
     }
     .sidebar.is-active .logo {
         margin-right: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
 
     .sidebar.is-active .logo img {
@@ -233,6 +233,7 @@ ul {
         display: block;
     }
     .sidebar.is-active ul li a {
+        padding: 8px 10px;
         justify-content: flex-start;
     }
     .sidebar.is-active ul li span {
@@ -320,16 +321,14 @@ ul {
         font-size: 12px;
     }
     .overlay {
-        background-color: #00000000;
         position: absolute;
-        z-index: -10;
-        transition: 0.3s;
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+        transition: 0.3s linear;
     }
 
     .overlay.activated {
         background-color: #000000a3;
-        z-index: 1;
-        width: 100vw;
-        height: 100vh;
     }
 }
