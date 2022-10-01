@@ -136,6 +136,7 @@
             </div>
             
         </div>
+        <div class="overlay"></div>
         <div class="content">
             <div class="title"><h2>البيانات الأساسية</h2></div>
             <div class="cards">
@@ -232,8 +233,19 @@
     <script>
         const menu = document.querySelector('.sidebar');
         const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.overlay');
+
         menu.addEventListener('click', () => (
             sidebar.classList.toggle('is-active')
+        ))
+        menu.addEventListener('click', () => (
+            overlay.classList.toggle('activated')
+        ))
+        overlay.addEventListener('click', () => (
+            overlay.classList.remove('activated')
+        ))
+        overlay.addEventListener('click', () => (
+            sidebar.classList.remove('is-active')
         ))
     </script>
 </body>

@@ -185,6 +185,7 @@ ul {
 @media (max-width:768px) {
     .logo {
         margin-right: 0;
+        margin-bottom: 40px;
     }
 
     .logo img {
@@ -221,10 +222,11 @@ ul {
     }
     .sidebar.is-active .logo {
         margin-right: 10px;
+        margin-bottom: 20px;
     }
 
     .sidebar.is-active .logo img {
-        margin-left: 0;
+        margin-left: 10px;
     }
     .sidebar.is-active .logo h2,
     .sidebar.is-active .logo span {
@@ -255,6 +257,7 @@ ul {
     flex: 1 1 0;
     background-color: #F2F2F2;
     padding: 30px 30px;
+    height: 100vh;
 }
 
 @media (max-width:768px) {
@@ -311,4 +314,20 @@ ul {
 .cards .card .info-row span:first-of-type {
     font-weight: lighter;
     width: 110px;
+}
+
+@media (max-width:768px) {
+    .overlay {
+        background-color: #00000000;
+        position: absolute;
+        z-index: -10;
+        transition: 0.3s;
+    }
+
+    .overlay.activated {
+        background-color: #000000a3;
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+    }
 }
