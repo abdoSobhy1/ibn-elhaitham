@@ -268,18 +268,14 @@
         const overlay = document.querySelector('.overlay');
         const dark = document.querySelector('.dark-toggle');
         const content = document.querySelector('.content');
-        menu.addEventListener('click', () => (
+        menu.onclick = function(){
             sidebar.classList.toggle('is-active')
-        ))
-        menu.addEventListener('click', () => (
             overlay.classList.toggle('activated')
-        ))
-        overlay.addEventListener('click', () => (
+        }
+        overlay.onclick = function(){
             overlay.classList.remove('activated')
-        ))
-        overlay.addEventListener('click', () => (
             sidebar.classList.remove('is-active')
-        ))
+        }
         dark.onclick = function(){
             sidebar.classList.toggle('dark');
             content.classList.toggle('dark');

@@ -329,10 +329,11 @@ ul {
         width: 94px;
     }
     .overlay {
-        position: absolute;
+        position: fixed;
+        top: 0;
         z-index: -1;
-        width: 100vw;
-        height: 100vh;
+        min-width: 100vw;
+        min-height: 100%;
         transition: 0.3s linear;
     }
 
