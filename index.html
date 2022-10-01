@@ -229,12 +229,16 @@
                 </div>
             </div>
         </div>
+        <div class="dark-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </div>
     </div>
     <script>
         const menu = document.querySelector('.sidebar');
         const sidebar = document.querySelector('.sidebar');
         const overlay = document.querySelector('.overlay');
-
+        const dark = document.querySelector('.dark-toggle');
+        const content = document.querySelector('.content');
         menu.addEventListener('click', () => (
             sidebar.classList.toggle('is-active')
         ))
@@ -247,6 +251,11 @@
         overlay.addEventListener('click', () => (
             sidebar.classList.remove('is-active')
         ))
+        dark.onclick = function(){
+            sidebar.classList.toggle('dark');
+            content.classList.toggle('dark');
+            dark.classList.toggle('dark');
+        };
     </script>
 </body>
 </html>
