@@ -49,6 +49,7 @@ body {
     }
 
     .side-content {
+        position: unset;
         right: 0;
         height: 100vh;
         max-width: 100%;
