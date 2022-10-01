@@ -13,6 +13,9 @@
 <body>
     <div class="container">
         <div class="sidebar">
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <div class="side-content">
                 <div class="logo">
                     <div class="image">
@@ -22,97 +25,97 @@
                     <span>نظام ابن الهيثم لإدارة شئون الطلاب</span>
                 </div>
                 <ul class="shortcuts">
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-at"></i>
                             <span>الايميل الجامعي</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#" class="active">
                             <i class="fa-solid fa-clipboard-list"></i>
                             <span>البيانات الأساسية</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-file"></i>
                             <span>التسجيل الأكاديمي</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-table-cells"></i>
                             <span>الجدول الدراسي</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-money-check-dollar"></i>
                             <span>المصاريف الدراسية</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-bookmark"></i>
                             <span>قائمة الحجز</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-regular fa-clipboard"></i>
                             <span>تقرير الغياب</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-table-list"></i>
                             <span>جدول الامتحانات</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-clipboard-question"></i>
                             <span>الاستبيان</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-graduation-cap"></i>
                             <span>تقديرات المقررات</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-list-check"></i>
                             <span>رغبات الالتحاق</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-graduation-cap"></i>
                             <span>نتيجة المقررات</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-triangle-exclamation"></i>
                             <span>الانذارات الأكاديمية</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-regular fa-clipboard"></i>
                             <span>التدريب الصيفي</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-file-medical"></i>
                             <span>استمارة الكشف الطبي</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="shortcut">
                         <a href="#">
                             <i class="fa-solid fa-envelope"></i>
                             <span>بريد النظام</span>
@@ -263,7 +266,7 @@
         </div>
     </div>
     <script>
-        const menu = document.querySelector('.sidebar');
+        const menu = document.querySelector('.menu-toggle');
         const sidebar = document.querySelector('.sidebar');
         const overlay = document.querySelector('.overlay');
         const dark = document.querySelector('.dark-toggle');
@@ -280,7 +283,14 @@
             sidebar.classList.toggle('dark');
             content.classList.toggle('dark');
             dark.classList.toggle('dark');
-        };
+        }
+        document.querySelectorAll('li a').forEach(item => {
+            item.addEventListener('click', event => {
+                document.querySelectorAll('li a').forEach(i => {i.classList.remove('active')})
+                item.classList.add('active')
+            })
+        })
+
     </script>
 </body>
 </html>
