@@ -195,6 +195,7 @@ ul {
         display: none;
     }
     .sidebar ul li a {
+        justify-content: center;
     }
 
     .sidebar ul li a.active,
@@ -205,9 +206,21 @@ ul {
     .sidebar ul li span {
         display: none;
     }
+    .sidebar ul li i {
+        padding-left: 0;
+    }
 
     .student .info span {
         display: none;
+    }
+    .student-info button {
+        display: none;
+    }
+    .student {
+
+    }
+    .student img {
+        width:30px;
     }
 }
 
@@ -215,6 +228,14 @@ ul {
     flex: 1 1 0;
     background-color: #F2F2F2;
     padding: 30px 30px;
+}
+
+@media (max-width:768px) {
+    .content {
+        padding-top: 20px;
+        padding-right: 65px;
+        max-width: 100%;
+    }
 }
 
 .content .title h2 {
