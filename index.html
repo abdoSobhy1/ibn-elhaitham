@@ -229,5 +229,12 @@
             </div>
         </div>
     </div>
+    <script>
+        const menu = document.querySelector('.sidebar');
+        const sidebar = document.querySelector('.sidebar');
+        menu.addEventListener('click', () => (
+            sidebar.classList.toggle('is-active')
+        ))
+    </script>
 </body>
 </html>

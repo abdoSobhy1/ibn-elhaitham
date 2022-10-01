@@ -44,7 +44,7 @@ body {
         overflow: hidden;
     }
 
-    .sidebar:hover {
+    .sidebar.is-active {
         max-width: 300px;
     }
 
@@ -216,10 +216,37 @@ ul {
     .student-info button {
         display: none;
     }
-    .student {
-
-    }
     .student img {
+        width:30px;
+    }
+    .sidebar.is-active .logo {
+        margin-right: 10px;
+    }
+
+    .sidebar.is-active .logo img {
+        margin-left: 0;
+    }
+    .sidebar.is-active .logo h2,
+    .sidebar.is-active .logo span {
+        display: block;
+    }
+    .sidebar.is-active ul li a {
+        justify-content: flex-start;
+    }
+    .sidebar.is-active ul li span {
+        display: block;
+    }
+    .sidebar.is-active ul li i {
+        padding-left: 10px;
+    }
+
+    .sidebar.is-active .student .info span {
+        display: block;
+    }
+    .sidebar.is-active .student-info button {
+        display: inline;
+    }
+    .sidebar.is-active .student img {
         width:30px;
     }
 }
