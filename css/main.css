@@ -152,11 +152,6 @@ body.dark .sidebar header .toggle {
     color: var(--text-color);
 }
 
-.menu-links {
-    margin: 0;
-    margin-top: 30px;
-}
-
 .menu-links,
 .bottom-content {
     padding: 10px;
@@ -212,6 +207,10 @@ body.dark .sidebar header .toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.menu-links {
+    margin: 0;
 }
 
 .menu-bar .mode i {
