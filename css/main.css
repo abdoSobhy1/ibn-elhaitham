@@ -153,7 +153,7 @@ body.dark .sidebar header .toggle {
 }
 
 .menu-links {
-    margin-top: 30px;
+    margin: 0;
 }
 
 .menu-links,
@@ -161,8 +161,12 @@ body.dark .sidebar header .toggle {
     padding: 10px;
 }
 
+.menu {
+    margin: 0;
+}
+
 .sidebar li {
-    height: 35px;
+    height: 37.5px;
     margin-top: 5px;
     list-style: none;
     display: flex;
@@ -203,10 +207,11 @@ body.dark .sidebar header .toggle {
 }
 
 .sidebar .menu-bar {
-    height: calc(100% - 50px);
+    height: calc(100% - 30px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    justify-content: center;
 }
 
 .menu-bar .mode i {
@@ -337,6 +342,7 @@ body.dark .sidebar li a.active .text {
 .content .title h2 {
     margin: 0 10px 0 0;
     font-size: 20px;
+    color: var(--text-color);
     font-weight: bold;
     padding-right: 10px;
     border-right: var(--primary-color) 3px solid;
@@ -345,7 +351,7 @@ body.dark .sidebar li a.active .text {
 .cards {
     display: grid;
     grid-template-columns: repeat(1, minmax(auto, 1fr));
-    gap: 30px;
+    gap: 15px;
     margin: 30px 0;
 }
 
