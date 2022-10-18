@@ -191,12 +191,14 @@ body.dark .sidebar header .toggle {
     transition: 0.3s;
 }
 
-.sidebar li a:hover {
+.sidebar li a:hover,
+.sidebar li a.active {
     background-color: var(--primary-color);
     color: var(--sidebar-color);
 }
 
-.sidebar li a:hover .text {
+.sidebar li a:hover .text,
+.sidebar li a.active .text {
     color: var(--sidebar-color);
 }
 
@@ -294,7 +296,9 @@ body.dark .toggle-switch .switch i.sun {
 }
 
 body.dark .sidebar li a:hover,
-body.dark .sidebar li a:hover .text {
+body.dark .sidebar li a.active,
+body.dark .sidebar li a:hover .text,
+body.dark .sidebar li a.active .text {
     color: var(--text-color);
 }
 

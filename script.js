@@ -17,3 +17,12 @@ overlay.addEventListener("click", () => {
 modeSwitch.addEventListener("click", () => {
   body.classList.toggle("dark");
 });
+
+document.querySelectorAll(".menu-links li a").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    document.querySelectorAll(".menu-links li a").forEach((i) => {
+      i.classList.remove("active");
+    });
+    item.classList.add("active");
+  });
+});
